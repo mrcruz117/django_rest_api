@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-
+# NEXT STEP: Django Rest Framework Model Serializers
 class Product(models.Model):
     title = models.CharField(max_length=120)
     content = models.TextField(blank=True, null=True)
