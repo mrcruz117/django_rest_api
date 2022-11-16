@@ -12,5 +12,7 @@ def api_home(request, *args, **kwargs):
         data = json.loads(body)
     except:
         pass
-    print(data)
-    return JsonResponse(res)
+    print("GET", request.GET)
+    data['headers'] = dict(request.headers)
+    data['content_type'] = request.content_type
+    return JsonResponse(data)
